@@ -13,10 +13,9 @@ myForm.addEventListener('submit', function 콜백함수(e) {
     // output.textContent = textArea.textContent;
     let commands = textArea.value.split("\n")
     indent = "    "
-    let result = `
-        init(from decoder: Decoder) throws {
-        ${indent}let values = try decoder.container(keyedBy: CodingKeys.self)
-    `
+    let result = `init(from decoder: Decoder) throws {
+${indent}let values = try decoder.container(keyedBy: CodingKeys.self)
+`
     for (command of commands) {
         if (command.length == 0) {
             continue;
@@ -39,9 +38,10 @@ myForm.addEventListener('submit', function 콜백함수(e) {
         }
         console.log(line)
         // result += `${line} </br>`
-        result += `${indent} ${line} \r\n`
+        result += `${indent}${line} \r\n`
     }
     result += `}`
     output.textContent = result
+
 
 });
