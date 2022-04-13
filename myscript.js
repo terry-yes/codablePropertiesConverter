@@ -4,7 +4,7 @@ const textField = document.getElementById('textField')
 const output = document.getElementById('output')
 const textArea = document.getElementById("textArea")
 
-output.textContent = "기본"
+output.textContent = "결과가 여기에 표시됩니다."
 
 myForm.addEventListener('submit', function 콜백함수(e) {
     e.preventDefault();
