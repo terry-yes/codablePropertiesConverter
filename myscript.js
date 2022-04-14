@@ -34,7 +34,13 @@ ${indent}let values = try decoder.container(keyedBy: CodingKeys.self)
         // console.log("--------------")
         let line = `${variableName} = try values.decodeIfPresent(${typeName}.self, forKey: .${variableName})`
         if (!isOptional) {
-            line += ` ?? ""`
+            if (typeName == "Bool") {
+                line += " ?? false"
+            } else if (typeName.startsWith("[") && typeName.endsWith("]")) {
+                line += " ?? []"
+            } else {
+                line += ` ?? ""`
+            }
         }
         console.log(line)
         // result += `${line} </br>`
