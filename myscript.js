@@ -34,6 +34,9 @@ ${indent}let values = try decoder.container(keyedBy: CodingKeys.self)
         });
         // console.log(commandArr)
         let letOrVar = commandArr[0]
+        if (letOrVar != "let" && letOrVar != "var") {
+            continue;
+        }
         let variableName = commandArr[1].split(":")[0]
         if (variableName.endsWith(",")) {
             variableNames = commandArr.slice(1, -1)
