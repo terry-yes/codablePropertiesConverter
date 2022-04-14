@@ -83,8 +83,3 @@ ${indent}let values = try decoder.container(keyedBy: CodingKeys.self)
     result += `}`
     output.textContent = result
 });
-copyButton.addEventListener('click', function 콜백함수(e) {
-    console.log("hi")
-    output.select()
-    navigator.clipboard.writeText(output.value);
-});
