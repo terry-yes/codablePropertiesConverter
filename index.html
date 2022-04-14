@@ -11,9 +11,9 @@
 <form id="inputForm">
     <label for="textField"><h1>Codable 모델의 프로퍼티를 입력하세요</h1></label><br>
     <textarea class="form-control" id="textArea" name="w3review" rows="10" cols="100">
-var menuId: String?
-var page: String?
-var section: String?
+    let isService: Bool
+    let artistList: [ArtistModel]?
+    let albumImg, albumImgLarge: String?
 </textarea>
 
         <div class="form-check">
@@ -26,7 +26,8 @@ var section: String?
 </form>
 
 <div id="output" style="white-space: pre-wrap;"></div>
-    </div>
+<!--    <button id="copyButton">Copy text</button>-->
+</div>
 
 </body>
 <script src="myscript.js"></script>
